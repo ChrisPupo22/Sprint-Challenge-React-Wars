@@ -1,7 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios'
+import Cards from './components/cards.js'
 import './App.css';
 
+// const apiReq = axios.get('https://swapi.co/api/people/')
+// console.log(apiReq); 
+
 const App = () => {
+  const [data, setData] = useState([])
+
+  const fetch = () => {
+    axios.get('https://swapi.co/api/people/')
+    .then(res => {
+      setData(res.data)
+    })
+    .catch(error => {console.log('seems as if the data is lost somewhere on tattoine!')}
+    )
+  }
+
+  useEffect(fetch, [])
+  console.log(data)
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
