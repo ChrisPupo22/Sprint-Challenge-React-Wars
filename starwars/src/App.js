@@ -32,9 +32,11 @@ const App = () => {
       <header className="header-container">
         <h1 className="Header">React Wars</h1>
       </header>  
+      <section>
       {data.map((item, index) => {
         return <Cards charName={item.name} charGender={item.gender} charYear={item.birth_year} />
       })}
+      </section>
     </div>
   );
 }
