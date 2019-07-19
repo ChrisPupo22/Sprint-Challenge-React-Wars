@@ -10,12 +10,28 @@
         font-size: 25px; 
     
     }
-        .card-container{
-            margin: 20px; 
+        section{
+            display: flex; 
+            flex-wrap: wrap; 
+            width: 100%; 
             justify-content: center; 
-            padding: 15px; 
-            font-size: 18px; 
-            
+            margin: 50px; 
+            margin-top: 0px; 
+
         }
-           
+            .card-container{
+                margin: 20px; 
+                justify-content: center; 
+                width: 25%; 
+                padding: 15px; 
+                border: 2px solid red; 
+                background-color: black; 
+                font-size: 20px; 
+                color: white; 
+                
+            }
+                .character-name{
+                    color: red; 
+                    
+                }
 }
