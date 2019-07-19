@@ -37,6 +37,9 @@ const App = () => {
         return <Cards charName={item.name} charGender={item.gender} charYear={item.birth_year} />
       })}
       </section>
+      <section>
+        
+      </section>
     </div>
   );
 }
