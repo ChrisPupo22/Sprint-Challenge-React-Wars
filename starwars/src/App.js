@@ -12,7 +12,7 @@ const App = () => {
   const fetch = () => {
     axios.get('https://swapi.co/api/people/')
     .then(res => {
-      setData(res.data)
+      setData(res.data.results)
     })
     .catch(error => {console.log('seems as if the data is lost somewhere on tattoine!')}
     )
@@ -29,7 +29,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <header className="header-container">
+        <h1 className="Header">React Wars</h1>
+      </header>  
+      {data.map((item, index) => {
+        return <Cards charName={item.name} charGender={item.gender} charYear={item.birth_year} />
+      })}
     </div>
   );
 }
